@@ -7,8 +7,9 @@
 ## Get Started:
 
   * Fork & Clone
-  * Run `npm install`
-
+  * Run `npm install` to install dependencies
+  * Run `yarn dev` in one terminal window
+  * Run `grunt dev` in another terminal window
 
 
 ### History
