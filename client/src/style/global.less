@@ -8,9 +8,34 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+
+  color: @black;
+
+  font-family: 'Open Sans', sans-serif;
 }
+
+a {
+  text-decoration: none;
+
+  color: initial;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+/* COLORS */
+@black: #333;
 
 /* END GLOBAL */

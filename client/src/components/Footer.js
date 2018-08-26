@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <div className="Footer">
       <div className="footer__links">
-      <input className="footer__links-search" type="text" 
+      <input className="footer__links-search" type="text" />
       </div>
       </div>
     );
