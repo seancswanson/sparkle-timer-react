@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import ProjectCounter from './ProjectCounter';
+import Project from './Project';
+
 
 class ProjectStage extends Component {
   render() {
     return (
       <div className="ProjectStage">
-        <div className="project">
-        TOTA
-        </div>
+        <ProjectCounter />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
       </div>
     );
   }

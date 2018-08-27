@@ -1,10 +1,7 @@
 /* FOOTER */
 .Footer {
-  flex-shrink: 0;
-
   height: 32px;
-
-  border: 2px solid red;
+  flex-shrink: 0;
 }
 /* END FOOTER */
 
@@ -22,14 +19,11 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-
   color: #333;
-
   font-family: 'Open Sans', sans-serif;
 }
 a {
   text-decoration: none;
-
   color: initial;
 }
 #root {
@@ -39,7 +33,6 @@ a {
   display: flex;
   align-items: stretch;
   flex-direction: column;
-
   height: 100%;
 }
 /* COLORS */
@@ -48,10 +41,8 @@ a {
 /* NAV */
 .Nav {
   flex: none;
-
   width: 100vw;
   height: 32px;
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
@@ -60,29 +51,65 @@ a {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-
   height: 100%;
 }
 .nav__links-item {
   flex: 1;
-
   padding: 20px;
-
   color: white;
   text-shadow: -0.3px -0.3px rgba(0, 0, 0, 0.2);
-
   font-weight: bold;
+}
+.nav__links-item-username {
+  text-align: center;
+}
+.nav__links-item-newProject {
+  text-align: right;
 }
 /* END NAV */
 
+/* PROJECT */
+.Project {
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: column;
+  height: 100px;
+  margin: 10px 20px;
+  overflow: hidden;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.project__top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0, 255, 0, 0.7);
+}
+.project__bottom {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+/* END PROJECT */
+
+/* PROJECT Counter */
+.ProjectCounter {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+  border: 2px solid black;
+}
+/* END PROJECT COUNTER */
+
 /* PROJECT STAGE */
 .ProjectStage {
-  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-
   width: 100%;
-
-  border: 1px solid blue;
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ece1fb' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
