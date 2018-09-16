@@ -1,10 +1,72 @@
-/* PROJECT Counter */
+/* PROJECT COUNTER */
 .ProjectCounter {
   display: flex;
-  flex-direction: column;
-  height: 100px;
+  align-items: center;
+  flex-direction: row;
+
   width: 100%;
-  border: 2px solid black;
+  height: 80px;
+
+  background: rgba(0, 255, 0, .8);
 }
+
+.timer-button {
+  width: 3vh;
+  height: 3vh;
+
+  cursor: pointer;
+
+  background-position: center center;
+  background-size: contain;
+}
+
+.timer-button:hover {
+  opacity: .8;
+  border-radius: 100%;
+}
+
+.timer-add {
+  margin-right: 10px;
+  margin-left: 25px;
+
+  background-image: url(../../img/plus.svg);
+}
+
+.timer-minus {
+  margin-right: 5px;
+
+  background-image: url(../../img/minus.svg);
+}
+
+.timer-pause {
+  margin-right: 5px;
+
+  background-image: url(../../img/pause.svg);
+}
+
+.timer-check {
+  margin-right: 25px;
+  margin-left: 10px;
+
+  background-image: url(../../img/check.svg);
+
+}
+
+.counter-container {
+flex: auto;
+
+margin: 0 auto;
+
+text-align: center;
+}
+
+.counter-top {
+  font-size: 30px;
+}
+
+.counter-bottom {
+  font-size: 16px;
+}
+
 
 /* END PROJECT COUNTER */

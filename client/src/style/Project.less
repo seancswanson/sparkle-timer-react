@@ -4,7 +4,7 @@
   flex-basis: 70%;
   flex-direction: column;
 
-  height: 100px;
+  height: auto;
   margin: 10px 20px;
   overflow: hidden;
   border: 3px solid rgba(0, 0, 0, .2);
@@ -17,15 +17,28 @@
 
   padding: 10px;
 
-  background: rgba(0, 255, 0, .7);
+  background: rgba(0, 255, 0, .79);
+}
+
+.project__title {
+  flex-grow: 1;
+}
+
+.project__play {
+  text-align: right;
+  background-image: url(../../img/play.svg);
+  background-size: contain;
+  background-position: center center;
+  width: 2.5vh;
+  height: 2.5vh;
 }
 
 .project__bottom {
   display: flex;
   align-items: center;
   flex-grow: 1;
-
-  padding: 10px;
+  display: none;
+  padding: 15px;
 
 
   background: rgba(255, 255, 255, .7);

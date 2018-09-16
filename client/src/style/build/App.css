@@ -35,6 +35,9 @@ a {
   flex-direction: column;
   height: 100%;
 }
+.pointerCursor {
+  cursor: pointer;
+}
 /* COLORS */
 /* END GLOBAL */
 
@@ -55,7 +58,7 @@ a {
 }
 .nav__links-item {
   flex: 1;
-  padding: 20px;
+  padding: 15px;
   color: white;
   text-shadow: -0.3px -0.3px rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -66,6 +69,14 @@ a {
 .nav__links-item-newProject {
   text-align: right;
 }
+.sparkle-icon {
+  display: inline-block;
+  background-image: url(../../img/sparkle.svg);
+  background-size: contain;
+  background-position: center center;
+  width: 2.5vh;
+  height: 2.5vh;
+}
 /* END NAV */
 
 /* PROJECT */
@@ -73,7 +84,7 @@ a {
   display: flex;
   flex-basis: 70%;
   flex-direction: column;
-  height: 100px;
+  height: auto;
   margin: 10px 20px;
   overflow: hidden;
   border: 3px solid rgba(0, 0, 0, 0.2);
@@ -83,24 +94,77 @@ a {
   display: flex;
   align-items: center;
   padding: 10px;
-  background: rgba(0, 255, 0, 0.7);
+  background: rgba(0, 255, 0, 0.79);
+}
+.project__title {
+  flex-grow: 1;
+}
+.project__play {
+  text-align: right;
+  background-image: url(../../img/play.svg);
+  background-size: contain;
+  background-position: center center;
+  width: 2.5vh;
+  height: 2.5vh;
 }
 .project__bottom {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding: 10px;
+  display: none;
+  padding: 15px;
   background: rgba(255, 255, 255, 0.7);
 }
 /* END PROJECT */
 
-/* PROJECT Counter */
+/* PROJECT COUNTER */
 .ProjectCounter {
   display: flex;
-  flex-direction: column;
-  height: 100px;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
-  border: 2px solid black;
+  height: 80px;
+  background: rgba(0, 255, 0, 0.8);
+}
+.timer-button {
+  width: 3vh;
+  height: 3vh;
+  cursor: pointer;
+  background-position: center center;
+  background-size: contain;
+}
+.timer-button:hover {
+  opacity: 0.8;
+  border-radius: 100%;
+}
+.timer-add {
+  margin-right: 10px;
+  margin-left: 25px;
+  background-image: url(../../img/plus.svg);
+}
+.timer-minus {
+  margin-right: 5px;
+  background-image: url(../../img/minus.svg);
+}
+.timer-pause {
+  margin-right: 5px;
+  background-image: url(../../img/pause.svg);
+}
+.timer-check {
+  margin-right: 25px;
+  margin-left: 10px;
+  background-image: url(../../img/check.svg);
+}
+.counter-container {
+  flex: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+.counter-top {
+  font-size: 30px;
+}
+.counter-bottom {
+  font-size: 16px;
 }
 /* END PROJECT COUNTER */
 
@@ -114,3 +178,199 @@ a {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ece1fb' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 /* END PROJECT STAGE */
+
+/* SPLASH SCREEN */
+.SplashScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: -webkit-linear-gradient(330deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: -o-linear-gradient(330deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.SplashScreen .splash-container {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  max-width: 400px;
+  min-height: 430px;
+  max-height: 700px;
+  padding-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(330deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: -o-linear-gradient(330deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.33), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* Login Form */
+  /* Minimized Actions */
+}
+.SplashScreen .splash-container:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+.SplashScreen .splash-container .splash-heading {
+  text-align: center;
+}
+.SplashScreen .splash-container .splash-heading-welcome {
+  margin-bottom: 0;
+  padding-top: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1em;
+}
+.SplashScreen .splash-container .splash-heading-sparkle {
+  margin-top: 0;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2em;
+}
+.SplashScreen .splash-container .splash-logo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 30px auto 20px auto;
+  animation: spin 10s infinite linear;
+  background-image: url(../../img/sparkle_circle.svg);
+  background-position: center center;
+  background-size: contain;
+}
+.SplashScreen .splash-container .login-form .form-container {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 40px 8px;
+  border-radius: 6px;
+  background: white;
+}
+.SplashScreen .splash-container .login-form .form-container input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.SplashScreen .splash-container .login-form .form-container .form-input {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 5px;
+  transition: all 0.2s linear;
+  border: none;
+  border-bottom: 2px solid #888;
+  outline: none;
+}
+.SplashScreen .splash-container .login-form .form-container .form-input:focus {
+  border-bottom: 2px solid #8ec5fc;
+}
+.SplashScreen .splash-container .login-form .form-container .input-username {
+  margin-bottom: 25px;
+}
+.SplashScreen .splash-container .login-form .form-container .form-login-button {
+  display: block;
+  width: 95%;
+  margin: 15px auto 5px auto;
+  padding: 15px;
+  transition: all 0.2s linear;
+  letter-spacing: 2px;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  outline: none;
+  background: #e0c3fc;
+  background-image: -webkit-linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 24%);
+  background-image: -o-linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 54%);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 5%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+}
+.SplashScreen .splash-container .login-form .form-container .form-login-button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+.SplashScreen .splash-container .login-form .form-container .form-login-button:focus {
+  border: 2px solid black;
+}
+.SplashScreen .splash-container .login-form .form-not-registered {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 300;
+}
+.SplashScreen .splash-container .login-form .form-not-registered .form-signup-link {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+.SplashScreen .splash-container .minimized-actions {
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+  width: 95%;
+  min-height: 50px;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: white;
+  box-shadow: 0 -1px 3px rgba(255, 255, 255, 0.2);
+}
+.SplashScreen .splash-container .minimized-actions .minimized-button {
+  width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.SplashScreen .splash-container .minimized-actions .minimized-button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.SplashScreen .splash-container .minimized-actions .minimized-signup-button {
+  margin-right: 10px;
+  background: #e0c3fc;
+  background-image: -webkit-linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 24%);
+  background-image: -o-linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 54%);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 5%);
+}
+.SplashScreen .splash-container .minimized-actions .minimized-github-button {
+  color: black;
+}
+.SplashScreen .splash-container .minimized-actions .have-an-account {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+.SplashScreen .splash-container .minimized-actions .sign-in-link {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* END SPLASH SCREEN */
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
